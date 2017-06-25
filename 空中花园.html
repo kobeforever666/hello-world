@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <style>
+
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 200px;
+            height: 120px;
+
+        }
+    </style>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                var scrollLong = $(window).scrollTop();
+                if (scrollLong >= 160) {
+                    $("#show_main").animate({
+                        "top":"0px",
+                        "opacity":"1"
+                    },2000);
+                    $(".leaf-menban").fadeIn(3000);
+                }
+                if (scrollLong >= 250) {
+                    $("#banner_show").css("filter", "blur(2px)")
+                } else {
+                    $("#banner_show").css("filter", "blur(0px)")
+                }
+                if (scrollLong >= 1200) {
+                    $("#about_show").animate({
+                        "right":"0px"
+                    },1000);
+                }
+                if (scrollLong >= 1550) {
+                    $("#about_show2").animate({
+                        "left":"0px"
+                    },1000);
+                }
+            })
+
+        });
+    </script>
+</head>
+<body >
+<div class="container-fluid">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background:rgba(13,13,13,0.7)">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color:#e7e7e7"><span
+                        class="glyphicon glyphicon-home"></span>空中花园</a>
+            </div>
+            <div class="collapse navbar-collapse" id="example">
+                <ul class="nav navbar-nav navbar-right fontColor">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost:63342/untitled/20170424%E7%BB%A7%E7%BB%ADbootstrap/%E7%A9%BA%E4%B8%AD%E8%8A%B1%E5%9B%ADform.html?_ijt=3dkmlu8dg45o4kqbdbi089magj">About
+                            us</a></li>
+                    <li><a href="#">Services</a></li>
+
+                    <li><a href="#">……</a></li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            ……<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">j2ee</a>
+                            </li>
+                            <li>
+                                <a href="#">jsp</a>
+                            </li>
+                            <li>
+                                <a href="#">ssh</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">mvc</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container-fluid" style="background: url('img/row-bot-bg.jpg');padding: 0" id="banner_show">
+
+    <div class="container" style="padding: 50px 0">
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1 col-sm-12 col-xs-12">
+                <img src="img/logo2.png" alt="" class="img-responsive">
+            </div>
+        </div>
+
+        <div class="row" style="padding: 20px 0;margin: 0">
+            <div class="col-md-8 col-md-offset-2"
+                 style="border: 10px solid rgb(255,255,255);border-radius: 3px;padding: 0">
+                <div id="lb" class="carousel slide" data-ride="carousel" data-interval="2000">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#lb" data-slide-to="0" class="active"></li>
+                        <li data-target="#lb" data-slide-to="1"></li>
+                        <li data-target="#lb" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="img/slider-img1.jpg" alt="美女1">
+                            <div class="carousel-caption">……</div>
+                        </div>
+
+                        <div class="item">
+                            <img src="img/slider-img2.jpg" alt="美女2">
+                            <div class="carousel-caption">……</div>
+                        </div>
+
+                        <div class="item">
+                            <img src="img/slider-img3.jpg" alt="美女3">
+                            <div class="carousel-caption">……</div>
+
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#lb" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#lb" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 col-md-offset-2 col-sm-12 col-xs-12" style="border-right: 1px dashed rgb(94,94,94)">
+                <img src="img/house_1.png" alt="" class="img-responsive" >
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0">
+                <p style="color: white;font-family: 微软雅黑;font-size: 1.1em">
+                    “高雅，是咖啡的心境;高贵，是名画的表情;高尚，是时代的风景;在这里，人生开始一段美丽的旅行。”</p>
+                <p style="color: white;font-family: 微软雅黑;font-size: 1.1em">“涵养优越气质，鉴赏主流生活”</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid" style="background: rgb(243,243,243);position: relative;padding: 0">
+    <div class="leaf-menban" style="position:absolute;top: 0;opacity: 0.2;display: none"><img src="img/yezi.png"
+                                                                                                alt="" class="img-responsive"></div>
+    <div class="container">
+        <div class="col-md-12">
+            <h3><span class="glyphicon glyphicon-home"></span>楼盘展示：</h3>
+            <div class="swiper-container" style="margin-top: -50px">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(img/page1-img2.jpg)"><a href="#"></a></div>
+                    <div class="swiper-slide" style="background-image:url(img/page1-img3.jpg)"><a href="#"></a></div>
+                    <div class="swiper-slide" style="background-image:url(img/page1-img4.jpg)"><a href="#"></a></div>
+                    <div class="swiper-slide" style="background-image:url(img/page1-img5.jpg)"><a href="#"></a></div>
+                    <div class="swiper-slide" style="background-image:url(img/page1-img6.jpg)"><a href="#"></a></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                autoplay: true,
+                speed: 3000,
+                pagination: '.swiper-pagination',
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+
+                coverflow: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true
+                }
+            });
+        </script>
+    </div>
+
+
+    <div class="container">
+        <div class="row" id="show_main" style="position: relative;top: 100px;opacity: 0">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="img/bieshu_1.jpg" alt="..." class="img-responsive">
+                    <div class="caption">
+                        <h3>美好盛景</h3>
+                        <p>醇美城市公园别墅境界1.1容积率,25000平米湿地公园环伺新亚洲主题风情园林,定义真正墅境人居生活,奏响下一个十年时代乐章</p>
+                        <p>
+                            <a href="http://localhost:63342/untitled/20170424%E7%BB%A7%E7%BB%ADbootstrap/%E7%A9%BA%E4%B8%AD%E8%8A%B1%E5%9B%ADproduct.html?_ijt=cjb2ejkt2ae3pe8oeo4q8rpohn"
+                               class="btn btn-success btn-block" role="button">详情</a> <a href="#"
+                                                                                         class="btn btn-default btn-block"
+                                                                                         role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="img/bieshu_2.jpg" alt="..."><!--class="img-responsive"-->
+                    <div class="caption">
+                        <h3>美好盛景 </h3>
+                        <p>醇美城市公园别墅境界1.1容积率,25000平米湿地公园环伺新亚洲主题风情园林,定义真正墅境人居生活,奏响下一个十年时代乐章</p>
+                        <p><a href="#" class="btn btn-success btn-block" role="button">Button</a> <a href="#"
+                                                                                                     class="btn btn-default btn-block"
+                                                                                                     role="button">Button</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="img/bieshu_3.jpg" alt="..." class="img-responsive">
+                    <div class="caption">
+                        <h3>美好盛景 </h3>
+                        <p>醇美城市公园别墅境界1.1容积率,25000平米湿地公园环伺新亚洲主题风情园林,定义真正墅境人居生活,奏响下一个十年时代乐章</p>
+                        <p><a href="#" class="btn btn-success btn-block" role="button">Button</a> <a href="#"
+                                                                                                     class="btn btn-default btn-block"
+                                                                                                     role="button">Button</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="img/bieshu_4.jpg" alt="..." class="img-responsive">
+                    <div class="caption">
+                        <h3>美好盛景 </h3>
+                        <p>醇美城市公园别墅境界1.1容积率,25000平米湿地公园环伺新亚洲主题风情园林,定义真正墅境人居生活,奏响下一个十年时代乐章</p>
+                        <p><a href="#" class="btn btn-success btn-block" role="button">Button</a> <a href="#"
+                                                                                                     class="btn btn-default btn-block"
+                                                                                                     role="button">Button</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="img/bieshu_1.jpg" alt="..." class="img-responsive">
+                    <div class="caption">
+                        <h3>美好盛景</h3>
+                        <p>醇美城市公园别墅境界1.1容积率,25000平米湿地公园环伺新亚洲主题风情园林,定义真正墅境人居生活,奏响下一个十年时代乐章</p>
+                        <p><a href="#" class="btn btn-success btn-block" role="button">Button</a> <a href="#"
+                                                                                                     class="btn btn-default btn-block"
+                                                                                                     role="button">Button</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="img/bieshu_2.jpg" alt="..." class="img-responsive">
+                    <div class="caption">
+                        <h3>美好盛景 </h3>
+                        <p>醇美城市公园别墅境界1.1容积率,25000平米湿地公园环伺新亚洲主题风情园林,定义真正墅境人居生活,奏响下一个十年时代乐章</p>
+                        <p><a href="#" class="btn btn-success btn-block" role="button">Button</a> <a href="#"
+                                                                                                     class="btn btn-default btn-block"
+                                                                                                     role="button">Button</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="img/bieshu_3.jpg" alt="..." class="img-responsive">
+                    <div class="caption">
+                        <h3>美好盛景 </h3>
+                        <p>醇美城市公园别墅境界1.1容积率,25000平米湿地公园环伺新亚洲主题风情园林,定义真正墅境人居生活,奏响下一个十年时代乐章</p>
+                        <p><a href="#" class="btn btn-success btn-block" role="button">Button</a> <a href="#"
+                                                                                                     class="btn btn-default btn-block"
+                                                                                                     role="button">Button</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="img/bieshu_4.jpg" alt="..." class="img-responsive">
+                    <div class="caption">
+                        <h3>美好盛景 </h3>
+                        <p>醇美城市公园别墅境界1.1容积率,25000平米湿地公园环伺新亚洲主题风情园林,定义真正墅境人居生活,奏响下一个十年时代乐章</p>
+                        <p><a href="#" class="btn btn-success btn-block" role="button">Button</a> <a href="#"
+                                                                                                     class="btn btn-default btn-block"
+                                                                                                     role="button">Button</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $("#show_main").children().hover(function () {
+                $(this).children().css("box-shadow", "5px -5px 0.5px  rgba(68, 157, 68,0.5),-5px -5px 1px rgba(68, 157, 68,0.5),-5px 5px 1px rgba(68, 157, 68,0.5),5px 5px 1px rgba(68, 157, 68,0.5)")
+                $(this).siblings().css("filter", "blur(1px)");
+            }, function () {
+                $(this).children().css("box-shadow", "0px 0px 0px ")
+                $(this).siblings().css("filter", "blur(0px)");
+            })
+        </script>
+    </div>
+</div>
+
+<div class="container-fluid" style="overflow: hidden">
+<div class="container" style="padding: 20px 0;position: relative;right: 100%" id="about_show">
+    <div class="col-md-6" style="margin:-20px 0">
+        <img src="img/map.png" alt="" class="img-responsive">
+    </div>
+    <div class="col-md-6">
+        <h3>ABOUT US</h3>
+        <p style="font-family: 微软雅黑;font-size: 1.2em;line-height: 1.3em;text-indent: 2.3em">
+            别墅，改善型住宅，在郊区或风景区建造的供休养用的园林住宅。是居宅之外用来享受生活的居所，是第二居所而非第一居所。现在普遍认识是，除“居住”这个住宅的基本功能以外，更主要体现生活品质及享用特点的高级住所，现代词义中为独立的园林式居所，都是独立成栋的。
+            即别野，是居宅之外用来享受生活的居所，是第二居所而非第一居所。追溯其起源，并没有一个明确的时间起始点，我国古代也很早就出现了别墅，大的有帝王的行宫，将相的府邸，小的有富商巨贾地主乡绅的山庄、庄园。别墅在国外的出现已经有很长的历史，西方意义上的别
+            墅主要是师承国外工业革命后的开发理念。按其所处的地理位置和功能的不同，又分为：山地别墅（包括森林别墅）、临水（江、湖、海）别墅、牧场（草原）别墅、庄园式别墅等。</p>
+        <div class="col-md-12" style="padding:0px;position: relative;left:0px;"><a href="#" class="btn btn-success"
+                                                                                   id="btn_more">更多>></a></div>
+        <script>
+            $("#btn_more").hover(function () {
+                $(this).animate({
+                    "width": "100%"
+                }, 2000, "easeOutElastic")
+            }, function () {
+                $(this).stop(true, false).animate({
+                    "width": "70px"
+                }, 1000)
+            })
+        </script>
+    </div>
+</div>
+
+
+<div class="container" style="padding: 20px 0;position: relative;left: 100%" id="about_show2">
+
+    <div class="col-md-6">
+        <h3>ABOUT US</h3>
+        <p style="font-family: 微软雅黑;font-size: 1.2em;line-height: 1.3em;text-indent: 2.3em">
+            一个成熟的室内设计师必须要有艺术家的素养、工程师的严
+            室内设计师
+            室内设计师
+            谨思想、旅行家的丰富阅历和人生经验、经营者的经营理念、财务专家的成本意识。有一位设计界的前辈讲设计即思想，设计是设计师专业知识、人生阅历、文化艺术涵养、道德品质等诸方面的综合体现。只有内在的修炼提高了，才能做出作品、精品、上品和神品，否则，就只是处于初级的模仿阶段，流于平凡。一个人品艺德不高的设计师，他的设计品位也不会有高的境界。因此室内设计师应该掌握：美术基础理论，室内平面制图，室内效果图渲染，效果图后期处理，装饰预算，装饰材料，实用工具，建筑风水学等。</p>
+        <div class="col-md-12" style="padding:0px;position: relative;left:0px;"><a href="#" class="btn btn-success"
+                                                                                   id="btn_more2">更多>></a></div>
+        <script>
+            $("#btn_more2").hover(function () {
+                $(this).animate({
+                    "width": "100%"
+                }, 2000, "easeOutElastic")
+            }, function () {
+                $(this).stop(true, false).animate({
+                    "width": "70px"
+                }, 1000)
+            })
+        </script>
+    </div>
+    <div class="col-md-6" style="margin:-10px 0">
+    <img src="img/architect.png" alt="" class="img-responsive">
+    </div>
+</div>
+</div>
+
+<div class="container-fluid" style="background:rgb(243,243,243)">
+    <p style="padding: 50px 0;text-align: center">@丁磊</p>
+</div>
+
+</body>
+</html>
